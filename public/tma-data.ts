@@ -1,4 +1,4 @@
-type Character = {
+export type Character = {
   name: string;
   skillset: string[];
   votes: number;
@@ -7,7 +7,7 @@ type Character = {
   nickName: null | string;
 };
 
-const data: Character[] = [
+export const data: Character[] = [
   {
     name: "Alex Louis Armstrong",
     nickName: "Major Armstrong",
