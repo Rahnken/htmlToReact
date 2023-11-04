@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <div className={styles.card}>
       <div className={styles.overlay50}>
-        <h2>{name}</h2>
+        <h3>{name}</h3>
         {nickName && <h3>{nickName}</h3>}
       </div>
       <img className={styles.cardImage} src={imageUrl} alt={name} />

@@ -12,7 +12,7 @@ const Table: React.FC<TableProps> = ({ data, keys }) => {
 
   return (
     <>
-      <h3> Top Characters as Voted</h3>
+      <h2 className="tableHeading"> Top Characters as Voted</h2>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -27,9 +27,13 @@ const Table: React.FC<TableProps> = ({ data, keys }) => {
               key={index}
               className={index % 2 === 0 ? styles.dark : styles.light}
             >
-              {keys.map((key) => (
-                <td key={key}>{item[key]}</td>
-              ))}
+              {keys.map((key) =>
+                key === "skillset" ? (
+                  <td key={key}>{item[key].join(", ")}</td>
+                ) : (
+                  <td key={key}>{item[key as keyof Character]}</td>
+                )
+              )}
             </tr>
           ))}
         </tbody>

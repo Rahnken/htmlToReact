@@ -6,11 +6,16 @@
   border: 1px solid #ddd;
 }
 
+.tableHeading {
+  line-height: 1;
+  margin: 0.5rem;
+}
+
 .table th,
 .table td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #555;
 }
 
 .table th {
